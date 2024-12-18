@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operation Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        input[type="text"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        #result {
+            font-size: 16px;
+            color: #333;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>String Operation Tool</h2>
+        <input type="text" id="string1" placeholder="Enter String 1">
+        <input type="text" id="string2" placeholder="Enter String 2">
+        <input type="text" id="string3" placeholder="Enter String 3">
+        <button id="reset" onclick="resetForm()">Reset</button>
+        <button id="calculate" onclick="calculateResult()">Calculate</button>
+        <div id="result">Result: Operation type, String 1, 2, and 3 and result will appear here.</div>
+    </div>
+    
+    <script>
+        function resetForm() {
+            document.getElementById('string1').value = '';
+            document.getElementById('string2').value = '';
+            document.getElementById('string3').value = '';
+            document.getElementById('result').textContent = 'Result: Operation type, String 1, 2, and 3 and result will appear here.';
+        }
+
+        function calculateResult() {
+            // Example calculation (replace with AJAX call to backend)
+            const str1 = document.getElementById('string1').value;
+            const str2 = document.getElementById('string2').value;
+            const str3 = document.getElementById('string3').value;
+            const operationType = "Concatenation"; // Example operation type
+            const result = str1 + str2 + str3; // Example operation
+            
+            document.getElementById('result').textContent = Result: ${operationType}, ${str1}, ${str2}, ${str3} and result is ${result};
+        }
+    </script>
+</body>
+</html>
